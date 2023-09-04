@@ -26,6 +26,7 @@ const CameraCapture: React.FC = () => {
     width: "100%", // 100% da largura da tela
     height: "100vh", // 100% da altura da tela
   };
+  //full
   return (
     <div>
       <button
