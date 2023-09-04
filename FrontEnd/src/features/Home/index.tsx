@@ -111,21 +111,21 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mt-10">
-          <ul className="-m-3.5 flex">
-            <li className="m-3.5 h-52 w-40 bg-gray-100 rounded-xl flex flex-col items-center justify-center text-center duration-300 hover:bg-white hover:shadow-2xl">
+        <div className="mt-10  ">
+          <ul className=" md:flex-row flex-col flex gap-2">
+            <li className=" h-52 md:w-40 w-full p-2 bg-gray-100 rounded-xl flex flex-col items-center justify-center text-center duration-300 hover:bg-white hover:shadow-2xl">
               <img className="max-h-20" src="https://i.ibb.co/Smq7sZK/2021-11-07-13h26-50.png" alt="" />
               <span className="font-semibold">Fruits & Vegetables</span>
             </li>
-            <li className="m-3.5 h-52 w-40 bg-gray-100 rounded-xl flex flex-col items-center justify-center text-center duration-300 hover:bg-white hover:shadow-2xl">
+            <li className=" h-52 md:w-40 w-full p-2 bg-gray-100 rounded-xl flex flex-col items-center justify-center text-center duration-300 hover:bg-white hover:shadow-2xl">
               <img className="max-h-20" src="https://i.ibb.co/PwYJkQs/2021-11-07-13h39-41.png" alt="" />
               <span className="font-semibold">Breads & Sweets</span>
             </li>
-            <li className="m-3.5 h-52 w-40 bg-gray-100 rounded-xl flex flex-col items-center justify-center text-center duration-300 hover:bg-white hover:shadow-2xl">
+            <li className=" h-52 md:w-40 w-full p-2 bg-gray-100 rounded-xl flex flex-col items-center justify-center text-center duration-300 hover:bg-white hover:shadow-2xl">
               <img className="max-h-20" src="https://i.ibb.co/Hx3vbFx/2021-11-07-13h39-52.png" alt="" />
               <span className="font-semibold">Frozen Seafoods</span>
             </li>
-            <li className="m-3.5 h-52 w-40 bg-gray-100 rounded-xl flex flex-col items-center justify-center text-center duration-300 hover:bg-white hover:shadow-2xl">
+            <li className=" h-52 md:w-40 w-full p-2 bg-gray-100 rounded-xl flex flex-col items-center justify-center text-center duration-300 hover:bg-white hover:shadow-2xl">
               <img className="max-h-20" src="https://i.ibb.co/4PCjhsS/2021-11-07-13h40-02.png" alt="" />
               <span className="font-semibold">Raw Meats</span>
             </li>
@@ -192,23 +192,15 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="mt-10">
-          <ul className="-m-3.5 flex">
-            <li className="product m-3.5 h-48 w-1/4 bg-cover rounded-xl"></li>
-            <li className="product2 m-3.5 h-48 w-1/4 bg-cover rounded-xl"></li>
-            <li className="product4 m-3.5 h-48 w-1/4 bg-cover rounded-xl"></li>
-            <li className="product3 m-3.5 h-48 w-1/4 bg-cover rounded-xl"></li>
+        <div className="mt-10 ">
+          <ul className=" flex md:flex-row flex-col gap-2">
+            <li className="product  h-48 md:w-1/4 w-full p-2 bg-cover rounded-xl"></li>
+            <li className="product2  h-48 md:w-1/4 w-full p-2 bg-cover rounded-xl"></li>
+            <li className="product4  h-48 md:w-1/4 w-full p-2 bg-cover rounded-xl"></li>
+            <li className="product3  h-48 md:w-1/4 w-full p-2 bg-cover rounded-xl"></li>
           </ul>
         </div>
       </section>
-
-      <footer className="mt-16 h-48">
-        <div className="container mx-auto py-5">
-          <a>
-            &copy; 2021 <span className="font-bold">Farmat</span> All Rights Reserved
-          </a>
-        </div>
-      </footer>
     </main>
   );
 };

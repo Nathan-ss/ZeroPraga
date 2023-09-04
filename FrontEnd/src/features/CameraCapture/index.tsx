@@ -22,7 +22,10 @@ const CameraCapture: React.FC = () => {
   const closeModal = () => {
     setModalVisible(false);
   };
-
+  const webcamStyles = {
+    width: "100%", // 100% da largura da tela
+    height: "100vh", // 100% da altura da tela
+  };
   return (
     <div>
       <button
@@ -33,8 +36,8 @@ const CameraCapture: React.FC = () => {
       >
         <LeftOutlined />
       </button>
-      <div className="flex flex-col items-center w-full h-full ">
-        <Webcam audio={false} ref={webcamRef} className="w-full h-full" />
+      <div className="flex flex-col items-center ">
+        <Webcam audio={false} ref={webcamRef} style={webcamStyles} />
       </div>
       <button onClick={captureImage} className="flex  z-10 fixed bottom-10 right-1/2 transform translate-x-1/2 p-4 bg-emerald-500 rounded-full shadow-lg text-white text-2xl">
         <CameraOutlined />
