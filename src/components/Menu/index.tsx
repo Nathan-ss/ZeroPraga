@@ -1,7 +1,6 @@
-import { ReactNode, useState } from "react";
-import { AliwangwangOutlined, CameraOutlined, HomeOutlined, UploadOutlined } from "@ant-design/icons";
+import { ReactNode } from "react";
+import { AliwangwangOutlined, HomeOutlined } from "@ant-design/icons";
 import { useNavigate, useLocation } from "react-router-dom";
-import { Button, Modal, Upload, message } from "antd";
 import SimpleDialogDemo from "../Dialog";
 
 interface MobileAppBarProps {
