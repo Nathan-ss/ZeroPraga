@@ -48,7 +48,7 @@ export const ErrorDialog: React.FC<DialogProps> = ({ open, onClose, onOther }) =
             Fechar
           </Button>
           <Button onClick={onOther} style={{ marginTop: 3 }}>
-            Tirar outra foto
+            Tentar novamente
           </Button>
         </Box>
       </DialogContent>
