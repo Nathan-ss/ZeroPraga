@@ -118,8 +118,8 @@ function SimpleDialog(props: SimpleDialogProps) {
     <>
       <Dialog onClose={handleClose} open={open} className="flex flex-col p-12">
         <DialogContent sx={{ display: "flex", gap: 1, flexDirection: "column", alignItems: file == undefined ? "center" : "" }}>
-          {file == undefined && <Typography variant="h5">Escolha uma opção</Typography>}
-          <Box sx={{ display: "flex", gap: 1 }}>
+          {file == undefined && <Typography variant="h6">Escolha uma opção</Typography>}
+          <Box sx={{ display: "flex", gap: 1, flexDirection: "column" }}>
             {file == undefined && (
               <Button
                 onClick={() => {
