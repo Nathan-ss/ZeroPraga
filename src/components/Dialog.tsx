@@ -11,6 +11,7 @@ import { RcFile } from "antd/es/upload";
 import { Loading } from "./Loading";
 import { useFileStore } from "../utils/store/useFileStore";
 import { ErrorDialog, SuccessDialog } from "./ConsentDialogs";
+import { DetectarPragasApi, iaResponse } from "../services";
 
 const emails = ["username@gmail.com", "user02@gmail.com"];
 
@@ -35,45 +36,39 @@ function SimpleDialog(props: SimpleDialogProps) {
   const [showSuccessDialog, setShowSuccessDialog] = useState(false);
   const [showErrorDialog, setShowErrorDialog] = useState(false);
 
+  const [result, setResult] = useState<iaResponse | undefined>(undefined);
+
   const handleClose = () => {
     if (!isLoading && !uploading) {
       onClose(selectedValue);
     }
   };
-  const handleUpload = () => {
+  const handleUpload = async () => {
     const formData = new FormData();
     fileList.forEach((file) => {
       formData.append("files[]", file as RcFile);
     });
     setUploading(true);
-    setTimeout(() => {
-      setLoading(true);
-      setTimeout(() => {
-        const randomSuccess = Math.random() > 0.5;
+    await DetectarPragasApi(file)
+      .then((r) => {
+        console.log(r);
+        setResult(r);
+        if (r) {
+          if (!r.ehPraga) {
+            setShowErrorDialog(true);
+            onClose(selectedValue);
+          } else {
+            setShowSuccessDialog(true);
+            onClose(selectedValue);
 
-        if (randomSuccess) {
-          setShowSuccessDialog(true);
-          onClose(selectedValue);
-        } else {
-          setShowErrorDialog(true);
-          onClose(selectedValue);
+            //setFileList([]);
+            //message.success("upload successfully.");
+          }
         }
-        setTimeout(() => {
-          setLoading(false);
-        }, 1000);
-      }, 3000);
-    }, 1000);
-    // You can use any AJAX library you like
-    fetch("https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188", {
-      method: "POST",
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then(() => {
-        setFileList([]);
-        message.success("upload successfully.");
       })
       .catch(() => {
+        setShowErrorDialog(true);
+        onClose(selectedValue);
         message.error("upload failed.");
       })
       .finally(() => {
@@ -169,6 +164,7 @@ function SimpleDialog(props: SimpleDialogProps) {
           setShowSuccessDialog(false);
           onOpen();
         }}
+        result={result}
       />
       <ErrorDialog
         open={showErrorDialog}
@@ -181,6 +177,7 @@ function SimpleDialog(props: SimpleDialogProps) {
           setShowErrorDialog(false);
           onOpen();
         }}
+        result={undefined}
       />
     </>
   );
