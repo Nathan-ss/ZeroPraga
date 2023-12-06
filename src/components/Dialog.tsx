@@ -198,11 +198,8 @@ export default function SimpleDialogDemo() {
 
   return (
     <>
-      <button
-        onClick={handleClickOpen}
-        className="text-white z-0 text-4xl fixed bottom-2 right-1/2 transform translate-x-1/2 bg-gradient-to-t from-green-800  to-emerald-500  flex justify-center p-4 rounded-full"
-      >
-        <CameraOutlined />
+      <button onClick={handleClickOpen} className="bg-gradient-to-t text-white from-green-800  to-emerald-500  flex justify-center items-center gap-2 px-4 py-2 rounded-md">
+        Capturar Praga <CameraOutlined />
       </button>
       <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} onOpen={handleClickOpen} />
     </>

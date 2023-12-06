@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { AliwangwangOutlined, HomeOutlined } from "@ant-design/icons";
+import { HeartOutlined, HomeOutlined } from "@ant-design/icons";
 import { useNavigate, useLocation } from "react-router-dom";
 import SimpleDialogDemo from "../Dialog";
 
@@ -13,19 +13,22 @@ export const MenuComponent: React.FC<MobileAppBarProps> = ({ children }) => {
 
   return (
     <>
-      <div className={`${path == "/CameraCapture" && "hidden"} bg-emerald-500  p-2 px-16 z-40 fixed bottom-0 left-0 w-full flex justify-between items-center shadow-md `}>
+      <div
+        style={{ borderTop: "1px #d5d5d5 black", borderTopRightRadius: "20px", borderTopLeftRadius: "20px" }}
+        className={`${path == "/CameraCapture" && "hidden"} bg-gray-200  border-black p-2 px-10 z-40 fixed bottom-0 left-0 w-full flex justify-between items-center text-gray-500 shadow-md `}
+      >
         <button
-          className="text-white text-2xl"
+          className=" text-2xl"
           onClick={() => {
             navigate("/");
           }}
         >
           <HomeOutlined />
         </button>
-        <SimpleDialogDemo />
-        <button className="text-white text-2xl">
-          <AliwangwangOutlined />
+        <button className=" text-2xl">
+          <HeartOutlined />
         </button>
+        <SimpleDialogDemo />
       </div>
       <div className=" overflow-auto">
         {/* Renderiza o componente filho dentro da área de visualização */}

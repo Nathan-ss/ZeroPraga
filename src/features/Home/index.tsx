@@ -6,9 +6,9 @@ const Home = () => {
       <section className="juice3 bg-gray-100 bg-opacity-90 ">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row">
           <div className="juice relative lg:w-2/3 rounded-xl bg-secondary-lite bg-cover p-8 md:p-16">
-            <p className="max-w-sm text-secondary text-3xl md:text-4xl font-semibold">Active Summer With Juice Milk 300ml</p>
-            <p className="max-w-xs pr-10 text-secondary font-semibold mt-8">New arrivals with naturre fruits, juice milks, essential for summer</p>
-            <button className="mt-20 bg-white font-semibold px-8 py-2 rounded">Shop Now</button>
+            <p className="max-w-sm text-secondary text-3xl md:text-4xl font-semibold">Combata o Verão com Sucos de Plantas 300ml</p>
+            <p className="max-w-xs pr-10 text-secondary font-semibold mt-8">Novos produtos com frutas naturais, sucos de plantas, essenciais para o verão</p>
+
             <div className="absolute bottom-8 right-8 md:bottom-5 md:right-5 flex">
               <a className="h-6 w-6 flex items-center justify-center rounded-md bg-white">
                 <svg
@@ -47,25 +47,25 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="juice2 mt-6 lg:mt-0 lg:ml-6 lg:w-1/3 rounded-xl bg-primary-lite bg-cover p-8 md:p-16">
-            <div className="max-w-sm">
-              <p className="text-3xl md:text-4xl font-semibold uppercase">20% sale off</p>
+          {/* <div className="juice2 mt-6 lg:mt-0 lg:ml-6 lg:w-1/3 rounded-xl bg-primary-lite bg-cover p-8 md:p-16">
+            <div className="max-w-sm"> */}
+          {/* <p className="text-3xl md:text-4xl font-semibold uppercase">20% sale off</p>
               <p className="mt-8 font-semibold">
                 Syncthetic seeds
                 <br />
                 2.0 OZ
-              </p>
-              <button className="mt-20 bg-white font-semibold px-8 py-2 rounded">Shop Now</button>
-            </div>
-          </div>
+              </p> */}
+          {/* <button className="mt-20 bg-white font-semibold px-8 py-2 rounded">Shop Now</button> */}
+          {/* </div>
+          </div> */}
         </div>
       </section>
 
       <section className="container mx-auto pt-12 bg-white">
         <div className="relative flex items-end font-bold">
-          <h2 className="text-2xl">Browse by Category</h2>
+          <h2 className="text-2xl">Pesquise categorias</h2>
           <a className="ml-10 flex items-center text-gray-400">
-            <span className="text-sm">All Categories</span>
+            <span className="text-sm">Todas Categorias</span>
             <svg
               className="ml-3 h-3.5 svg-inline--fa fa-chevron-right fa-w-8 fa-9x"
               aria-hidden="true"
@@ -135,9 +135,8 @@ const Home = () => {
 
       <section className="container mx-auto pt-12">
         <div className="relative flex items-end font-bold">
-          <h2 className="text-2xl">Featured Brands</h2>
+          <h2 className="text-2xl">Dicas</h2>
           <a className="ml-10 flex items-center text-gray-400">
-            <span className="text-sm">All Offers</span>
             <svg
               className="ml-3 h-3.5 svg-inline--fa fa-chevron-right fa-w-8 fa-9x"
               aria-hidden="true"

@@ -22,7 +22,7 @@ export const SuccessDialog: React.FC<DialogProps> = ({ open, onClose, onOther, r
           Praga identificada com sucesso!
         </Typography>
         <Typography variant="h5" color={"red"}>
-          Atenção a sua planta está com uma praga
+          Atenção a sua planta está com <strong>Pulgões</strong>
         </Typography>
         <Box display={"flex"} gap={2}>
           <Typography variant="h6" mt={2} fontSize={12}>
